@@ -1,3 +1,4 @@
+import CTA from "@/freatures/homepage/CTA";
 import CustomSolution from "@/freatures/homepage/CustomSolution";
 import ExpertDigitalSolution from "@/freatures/homepage/ExpertDigitalSolution";
 import HeroSection from "@/freatures/homepage/HeroSection";
@@ -11,6 +12,7 @@ export default function Home() {
           <CustomSolution />
         </div>
         <ExpertDigitalSolution />
+        <CTA />
 
         {/* <Hero /> */}
         <div className="relative hidden bg-red-300">
