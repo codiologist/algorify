@@ -39,7 +39,7 @@ const Header = () => {
       <header>
         {/* Desktop Header */}
         <div
-          className={`fixed top-0 right-0 left-0 z-99 hidden w-full px-6 py-4 transition-all duration-300 ease-in-out lg:block ${isAtTop ? "bg-transparent" : "border-b border-gray-200/50 bg-white/90 backdrop-blur-md"} ${isVisible ? "translate-y-0" : "-translate-y-full"} `}
+          className={`fixed top-0 right-0 left-0 z-999 hidden w-full px-6 py-4 transition-all duration-300 ease-in-out lg:block ${isAtTop ? "bg-transparent" : "border-b border-gray-200/50 bg-white/90 backdrop-blur-md"} ${isVisible ? "translate-y-0" : "-translate-y-full"} `}
         >
           <div className="mx-auto flex max-w-full items-center justify-between">
             {/* Logo */}

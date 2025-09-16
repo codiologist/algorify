@@ -1,4 +1,5 @@
 import CustomSolution from "@/freatures/homepage/CustomSolution";
+import ExpertDigitalSolution from "@/freatures/homepage/ExpertDigitalSolution";
 import HeroSection from "@/freatures/homepage/HeroSection";
 
 export default function Home() {
@@ -6,10 +7,13 @@ export default function Home() {
     <div>
       <div className="page-wrapper">
         <HeroSection />
-        <CustomSolution />
+        <div className="relative z-50 -mt-170 lg:mt-10 2xl:-mt-10">
+          <CustomSolution />
+        </div>
+        <ExpertDigitalSolution />
 
         {/* <Hero /> */}
-        <div className="relative top-45 z-50 bg-red-300">
+        <div className="relative hidden bg-red-300">
           <p className="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
             repellendus totam odit? Repellat qui magnam accusantium excepturi

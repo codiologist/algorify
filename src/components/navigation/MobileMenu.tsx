@@ -69,7 +69,7 @@ export default function MobileMenu() {
     <>
       {/* Header */}
       <div
-        className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between bg-white px-6 py-4 transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 left-0 z-999 flex items-center justify-between bg-white px-6 py-4 transition-transform duration-300 ease-out ${
           isHeaderVisible ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{ boxShadow: "0 2px 10px rgba(0,0,0,0.1)" }}

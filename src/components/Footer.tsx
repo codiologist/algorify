@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="w-full items-start gap-6 space-y-6 lg:flex lg:w-6/12 lg:space-y-0 2xl:w-4/12">
           <div className="w-full lg:w-1/2">
             <h4 className="mb-2 text-lg font-medium lg:mb-6">Our Location</h4>
-            <p className="font-medium text-[#565656]">
+            <p className="text-gray font-medium">
               4, Bikalpo Tower, 1st Floor, Shimultoly Rd, Gazipur 1703.
             </p>
             <p>Bangladesh</p>
@@ -35,13 +35,13 @@ const Footer = () => {
                 <div>
                   <a
                     href="tel:+8801711356235"
-                    className="mr-2 inline-block font-medium text-[#565656]"
+                    className="text-gray mr-2 inline-block font-medium"
                   >
                     +880 171 135 6235,
                   </a>
                   <a
                     href="tel:+8801876594444"
-                    className="inline-block font-medium text-[#565656]"
+                    className="text-gray inline-block font-medium"
                   >
                     +880 187 659 4444
                   </a>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:info@algorifylabs.com"
-                  className="flex items-center gap-2 font-medium text-[#565656]"
+                  className="text-gray flex items-center gap-2 font-medium"
                 >
                   <Image
                     src={mail_icon}
@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="py-20">
         <Image src={logo} alt="Logo" className="mx-auto h-auto" />
       </div>
-      <p className="text-center text-[#565656]">
+      <p className="text-gray text-center">
         © 2025 Algorify – All Rights Reserved.
       </p>
     </footer>

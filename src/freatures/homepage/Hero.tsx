@@ -47,7 +47,7 @@ export function Hero() {
       <div className="mx-auto w-full text-center xl:max-w-4xl">
         <h1 className="text-foreground mb-8 text-4xl leading-[3.5rem] font-semibold text-balance xl:text-6xl xl:leading-tight 2xl:text-[5.5rem] 2xl:leading-[100px]">
           Your vision{" "}
-          <span className="text-[#565656]">
+          <span className="text-gray">
             our <br /> Innovation
           </span>{" "}
           crafting

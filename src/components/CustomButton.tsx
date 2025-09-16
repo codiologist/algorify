@@ -9,7 +9,7 @@ const buttonVariants = cva(
       variant: {
         transparent:
           "bg-transparent hover:bg-transparent text-black font-medium text-base border-2 border-black hover:border-black ",
-        green: "bg-green-400 text-black hover:bg-green-400 ",
+        green: "bg-lemon text-black hover:bg-lemon ",
         dark: "bg-[#050505] text-white hover:bg-[#050505] border-2 border-white",
       },
       size: {
@@ -36,7 +36,7 @@ const arrowVariants = cva(
         dark: "bg-[#B2F824] text-[#050505]",
       },
       size: {
-        default: "h-11 w-11",
+        default: "h-12 w-12",
         sm: "h-8 w-8",
         lg: "h-12 w-12",
       },
@@ -133,7 +133,7 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
     const arrowColors = getArrowColors(resolvedArrowVariant);
 
     const buttonContent = (
-      <div className="group flex cursor-pointer items-center gap-1">
+      <div className="group flex cursor-pointer items-center gap-0">
         <button
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}

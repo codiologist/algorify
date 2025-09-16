@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { CustomButton } from "@/components/CustomButton";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import like_icon from "/public/icons/like-icon.png";
@@ -39,30 +38,54 @@ const FEATURES: Feature[] = [
 
 const CustomSolution = () => {
   return (
-    <div className="container-xl relative top-10 z-50 bg-transparent">
-      <div className="flex flex-col gap-4 lg:flex-row">
-        <div className="w-full lg:w-8/12">
+    <section className="container-xl z-50 bg-transparent px-8 lg:px-0 lg:py-20">
+      <div className="flex flex-col items-end gap-4 lg:flex-row">
+        {/* Left Column */}
+        <div className="w-full lg:order-2 lg:w-4/12">
+          <div className="pl-0 lg:pl-6">
+            <h2 className="inline-block text-4xl leading-[1.1] font-medium tracking-tight text-black 2xl:text-[48px]">
+              Custom
+              <Image
+                src="/icons/flower-icon.png"
+                alt="Icon"
+                width={60}
+                height={60}
+                className="inline"
+              />
+              <span className="text-blue-brand mr-2">digital solutions</span>
+              <span>designed to scale your business.</span>
+            </h2>
+
+            <div className="mt-8">
+              <Link href="#">
+                <CustomButton variant="green">Try Now</CustomButton>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="w-full lg:order-1 lg:w-8/12">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((item) => {
-              const Icon = item.icon;
               const isFeatured = item.featured;
 
               return (
                 <Card
                   key={item.id}
                   className={[
-                    "relative h-full rounded-3xl border-0",
+                    "relative h-full rounded-3xl border-0 shadow-2xl",
                     "transition-colors",
                     isFeatured
                       ? "bg-blue-brand text-white sm:col-span-2 lg:col-span-1"
                       : "bg-white text-black",
                   ].join(" ")}
                 >
-                  <CardContent className="flex h-full flex-col p-7 md:p-8">
+                  <CardContent className="flex h-full flex-col gap-4">
                     {/* top index like "/ 01" */}
                     <span
                       className={[
-                        "absolute top-5 left-6 text-xs tracking-wider",
+                        "mb-10 text-base tracking-normal lg:mb-20 2xl:mb-24",
                         isFeatured ? "text-white/70" : "text-black/50",
                       ].join(" ")}
                     >
@@ -72,7 +95,7 @@ const CustomSolution = () => {
                     {/* icon */}
                     <div
                       className={[
-                        "mb-6 inline-flex size-16 items-center justify-center rounded-full",
+                        "inline-flex size-16 items-center justify-center rounded-full",
                         isFeatured
                           ? "bg-white"
                           : "text-blue-brand bg-blue-brand",
@@ -89,7 +112,7 @@ const CustomSolution = () => {
                     {/* title */}
                     <h3
                       className={[
-                        "mt-14 text-2xl leading-tight font-semibold",
+                        "text-4xl leading-tight font-semibold lg:text-2xl 2xl:text-3xl",
                         isFeatured ? "text-white" : "text-black",
                       ].join(" ")}
                     >
@@ -113,50 +136,20 @@ const CustomSolution = () => {
                     {/* description */}
                     <p
                       className={[
-                        "mt-4 text-sm leading-relaxed",
+                        "text-base leading-tight tracking-wide",
                         isFeatured ? "text-white/85" : "text-black/70",
                       ].join(" ")}
                     >
                       {item.description}
                     </p>
-
-                    {/* spacer */}
-                    <div className="mt-auto" />
                   </CardContent>
                 </Card>
               );
             })}
           </div>
         </div>
-        <div className="w-full lg:w-4/12">
-          <div className="pl-0 lg:pl-6">
-            <h2 className="text-4xl leading-[1.1] font-normal tracking-tight text-black">
-              Custom digital solutions designed to scale your business.
-            </h2>
-
-            <div className="mt-8 flex items-center gap-4">
-              <Button
-                asChild
-                className="rounded-full bg-lime-300 px-6 py-6 text-base text-black hover:bg-lime-300/90"
-              >
-                <Link href="#contact">Try Now</Link>
-              </Button>
-
-              <Button
-                variant="ghost"
-                size="icon"
-                className="size-12 rounded-full border border-black/10 hover:bg-black/5"
-                asChild
-              >
-                <Link href="#learn-more" aria-label="Learn more">
-                  <ArrowUpRight className="size-6" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

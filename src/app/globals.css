@@ -13,6 +13,7 @@
   --color-lemon: #b2f824;
   --color-blue: #2b64f5;
   --color-blue-brand: #3e69d7;
+  --color-gray: #565656;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -134,5 +135,5 @@
 }
 
 .container-xl {
-  @apply mx-auto max-w-7xl;
+  @apply mx-auto px-6 xl:max-w-7xl 2xl:max-w-[1440px];
 }

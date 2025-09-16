@@ -13,23 +13,23 @@ const HeroSection = () => {
   return (
     <section className="relative">
       <div className="relative w-full">
-        <Image src={bg_desktop} className="hidden w-full xl:block" alt="" />
-        <Image src={bg_mobile} className="blcok w-full xl:hidden" alt="" />
+        <Image src={bg_desktop} className="hidden w-full lg:block" alt="" />
+        <Image src={bg_mobile} className="blcok w-full lg:hidden" alt="" />
         {/* <Image
           src={plus_grid}
           className="relative top-0 h-auto w-full"
           alt=""
           /> */}
       </div>
-      <div className="absolute top-0 right-0 left-0 z-0 hidden w-full xl:block">
+      <div className="absolute top-0 right-0 left-0 z-0 hidden w-full lg:block">
         <Image src={bg_animation} className="w-full" alt="" />
       </div>
-      <div className="absolute top-10 right-0 left-0 z-50 flex min-h-screen items-start justify-center xl:top-15 xl:items-center">
+      <div className="absolute top-20 right-0 left-0 z-50 flex flex-col justify-center lg:items-start xl:top-35 xl:items-center 2xl:top-55">
         {/* Main Content */}
         <div className="mx-auto w-full text-center xl:max-w-4xl">
-          <h1 className="text-foreground mb-8 text-4xl leading-[3.5rem] font-semibold text-balance xl:text-6xl xl:leading-tight 2xl:text-[5.5rem] 2xl:leading-[100px]">
+          <h1 className="text-foreground mb-8 text-[40px] leading-[3.3rem] font-semibold text-balance xl:text-6xl xl:leading-tight 2xl:text-[5.5rem] 2xl:leading-[100px]">
             Your vision{" "}
-            <span className="text-[#565656]">
+            <span className="text-gray">
               our <br /> Innovation
             </span>{" "}
             crafting
@@ -48,6 +48,10 @@ const HeroSection = () => {
             <CustomButton variant="transparent">Request a Demo</CustomButton>
           </div>
         </div>
+
+        {/* <div className="relative top-50 block px-10 lg:hidden">
+          <CustomSolution />
+        </div> */}
       </div>
 
       {/* Decorative Stars */}
@@ -69,7 +73,7 @@ const HeroSection = () => {
       </div>
 
       {/* Animated Circle Badge Stars */}
-      <div className="absolute top-120 right-5 h-24 w-24 xl:top-147 xl:right-10 2xl:top-200">
+      <div className="absolute top-130 right-5 h-24 w-24 xl:top-140 xl:right-20 2xl:top-180 2xl:right-40">
         <div className="border-foreground flex h-full w-full items-center justify-center rounded-full border-2">
           <Image
             src={circle_badge}
