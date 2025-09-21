@@ -1,18 +1,25 @@
+import CeoMessage from "@/freatures/homepage/CeoMessage";
 import CTA from "@/freatures/homepage/CTA";
 import CustomSolution from "@/freatures/homepage/CustomSolution";
 import ExpertDigitalSolution from "@/freatures/homepage/ExpertDigitalSolution";
 import HeroSection from "@/freatures/homepage/HeroSection";
+import ServiceTags from "@/freatures/homepage/ServiceTags";
+import WhyUs from "@/freatures/homepage/WhyUs";
 
 export default function Home() {
   return (
     <div>
+      {/* <Loading /> */}
       <div className="page-wrapper">
         <HeroSection />
-        <div className="relative z-50 -mt-170 lg:mt-10 2xl:-mt-10">
+        <div className="3xl:-mt-10 relative z-50 -mt-170 lg:mt-10 2xl:mt-30">
           <CustomSolution />
         </div>
         <ExpertDigitalSolution />
         <CTA />
+        <ServiceTags />
+        <WhyUs />
+        <CeoMessage />
 
         {/* <Hero /> */}
         <div className="relative hidden bg-red-300">

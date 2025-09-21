@@ -18,7 +18,7 @@ const CTA = () => {
         <p className="absolute right-5 bottom-4 z-10 text-base font-medium text-[#676767]">
           Discover Your Potential
         </p>
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 opacity-60">
           <Image
             src={curve_shape_desktop}
             className="hidden h-auto w-[670px] lg:block"

@@ -108,7 +108,7 @@ export default function ExpertDigitalSolution() {
 
                 {/* Animate margin top */}
                 <div className="mt-32 transition-all duration-500 ease-in group-hover:mt-40">
-                  <h3 className="mb-6 text-4xl font-medium">{title}</h3>
+                  <h2 className="mb-6 text-4xl font-medium">{title}</h2>
                   <div className="flex flex-col items-center justify-between gap-4 lg:flex-row">
                     <p className="w-full 2xl:w-[500px]">{description}</p>
                     <div>

@@ -13,6 +13,7 @@
   --color-lemon: #b2f824;
   --color-blue: #2b64f5;
   --color-blue-brand: #3e69d7;
+  --color-blue-dark: #013ac9;
   --color-gray: #565656;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -50,6 +51,8 @@
 @theme {
   --font-grotesk: ${grotesk.variable};
   --animate-spin-badge: spin 15s linear infinite;
+  /* --breakpoint-2xl: 1536px; */
+  --breakpoint-3xl: 120rem;
 }
 
 :root {

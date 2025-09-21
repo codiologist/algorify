@@ -8,7 +8,7 @@ import sparkle_green from "/public/sparkle-green.png";
 export function Hero() {
   return (
     <section
-      className="bg-content relative flex min-h-screen bg-[url('/mobile-hero-bg.png')] bg-no-repeat px-6 py-10 lg:items-center lg:bg-[url('/desktop-hero-bg.png')] lg:bg-cover lg:bg-center xl:py-40 2xl:py-20"
+      className="bg-content 3xl:py-20 relative flex min-h-screen bg-[url('/mobile-hero-bg.png')] bg-no-repeat px-6 py-10 lg:items-center lg:bg-[url('/desktop-hero-bg.png')] lg:bg-cover lg:bg-center xl:py-40 2xl:py-20"
       //   style={{
       //     backgroundImage: "url(/hero-bg.png)",
       //     backgroundSize: "cover",
@@ -45,7 +45,7 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="mx-auto w-full text-center xl:max-w-4xl">
-        <h1 className="text-foreground mb-8 text-4xl leading-[3.5rem] font-semibold text-balance xl:text-6xl xl:leading-tight 2xl:text-[5.5rem] 2xl:leading-[100px]">
+        <h1 className="text-foreground 3xl:text-[5.5rem] 3xl:leading-[100px] mb-8 text-4xl leading-[3.5rem] font-semibold text-balance xl:text-6xl xl:leading-tight">
           Your vision{" "}
           <span className="text-gray">
             our <br /> Innovation

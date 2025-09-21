@@ -1,4 +1,6 @@
+// ./src/components/CustomButton.tsx
 import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
@@ -8,8 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         transparent:
-          "bg-transparent hover:bg-transparent text-black font-medium text-base border-2 border-black hover:border-black ",
-        green: "bg-lemon text-black hover:bg-lemon ",
+          "bg-transparent hover:bg-transparent text-black font-medium text-base border-2 border-black hover:border-black",
+        green: "bg-lemon text-black hover:bg-lemon",
         dark: "bg-[#050505] text-white hover:bg-[#050505] border-2 border-white",
       },
       size: {
@@ -49,11 +51,15 @@ const arrowVariants = cva(
 );
 
 export interface CustomButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ComponentPropsWithoutRef<"button">,
     VariantProps<typeof buttonVariants> {
+  /** When true, renders a Radix Slot instead of a native button (for wrapping links, etc.). */
   asChild?: boolean;
+  /** Show the circular arrow icon element to the right */
   showArrow?: boolean;
+  /** Override the arrow’s variant; defaults to a sensible mapping from the button variant */
   arrowVariant?: VariantProps<typeof arrowVariants>["variant"];
+  /** Override the arrow’s size; defaults to the button size */
   arrowSize?: VariantProps<typeof arrowVariants>["size"];
 }
 
@@ -81,7 +87,7 @@ const ArrowIcon = ({
       y="0.873"
       fill={backgroundFill}
       rx="25.5"
-    ></rect>
+    />
     <path
       fill={arrowFill}
       fillRule="evenodd"
@@ -91,7 +97,9 @@ const ArrowIcon = ({
   </svg>
 );
 
-const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
+type ButtonElement = React.ElementRef<"button">;
+
+const CustomButton = React.forwardRef<ButtonElement, CustomButtonProps>(
   (
     {
       className,
@@ -106,7 +114,10 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
     },
     ref,
   ) => {
-    // Determine arrow variant based on button variant if not explicitly set
+    // If asChild is true, render a Slot (so parent can pass <a>, <Link>, etc.)
+    const Comp = asChild ? Slot : "button";
+
+    // Determine arrow variant/size defaults based on button variant/size
     const resolvedArrowVariant =
       arrowVariant ||
       (variant === "green"
@@ -114,9 +125,10 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
         : variant === "dark"
           ? "dark"
           : "transparent");
+    const resolvedArrowSize = arrowSize || size;
 
-    const getArrowColors = (variant: string) => {
-      switch (variant) {
+    const getArrowColors = (v: string) => {
+      switch (v) {
         case "transparent":
           return { backgroundFill: "#000000", arrowFill: "#B2F824" };
         case "green":
@@ -130,29 +142,31 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
       }
     };
 
-    const arrowColors = getArrowColors(resolvedArrowVariant);
+    const arrowColors = getArrowColors(resolvedArrowVariant as string);
 
-    const buttonContent = (
+    return (
       <div className="group flex cursor-pointer items-center gap-0">
-        <button
+        <Comp
+          // Note: classNames are applied to whichever element is passed via Slot
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}
           {...props}
         >
           {variant === "transparent" && (
             <>
-              <span className="absolute inset-0 h-full w-full bg-transparent"></span>
-              <span className="bg-lemon absolute top-0 right-0 block h-64 w-64 origin-top-left -translate-x-6 rotate-50 transform rounded-full transition duration-700 ease-in-out group-hover:-rotate-21"></span>
+              <span className="absolute inset-0 h-full w-full bg-transparent" />
+              <span className="bg-lemon absolute top-0 right-0 block h-64 w-64 origin-top-left -translate-x-6 rotate-50 transform rounded-full transition duration-700 ease-in-out group-hover:-rotate-21" />
             </>
           )}
           <span className="relative z-10">{children}</span>
-        </button>
+        </Comp>
+
         {showArrow && (
           <div
             className={cn(
               arrowVariants({
                 variant: resolvedArrowVariant,
-                size: arrowSize || size,
+                size: resolvedArrowSize,
               }),
             )}
           >
@@ -164,10 +178,9 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
         )}
       </div>
     );
-
-    return buttonContent;
   },
 );
+
 CustomButton.displayName = "CustomButton";
 
 export { arrowVariants, buttonVariants, CustomButton };

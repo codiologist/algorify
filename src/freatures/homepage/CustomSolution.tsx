@@ -1,6 +1,6 @@
 import { CustomButton } from "@/components/CustomButton";
 import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import like_icon from "/public/icons/like-icon.png";
 import target_icon from "/public/icons/target-icon.png";
@@ -10,7 +10,7 @@ type Feature = {
   id: string; // e.g. "01"
   title: string; // e.g. "Expert Team"
   description: string; // e.g. "Skilled professionals..."
-  icon: any; // e.g. Target, ThumbsUp, or custom icon component
+  icon: StaticImageData; // e.g. Target, ThumbsUp, or custom icon component
   featured?: boolean; // blue card
 };
 
