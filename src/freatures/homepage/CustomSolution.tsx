@@ -46,7 +46,7 @@ const CustomSolution = () => {
             <h2 className="inline-block text-4xl leading-[1.1] font-medium tracking-tight text-black 2xl:text-[48px]">
               Custom
               <Image
-                src="/icons/flower-icon.png"
+                src="/icons/flower-icon.svg"
                 alt="Icon"
                 width={60}
                 height={60}

@@ -35,6 +35,7 @@ const arrowVariants = cva(
         transparent: "bg-black text-white",
         green: "bg-black text-white",
         "green-blue": "bg-transparent text-blue-600",
+        "green-black": "bg-transparent text-black",
         dark: "bg-[#B2F824] text-[#050505]",
       },
       size: {
@@ -135,6 +136,8 @@ const CustomButton = React.forwardRef<ButtonElement, CustomButtonProps>(
           return { backgroundFill: "#000000", arrowFill: "#B2F824" };
         case "green-blue":
           return { backgroundFill: "#ffffff", arrowFill: "#2563eb" };
+        case "green-black":
+          return { backgroundFill: "#ffffff", arrowFill: "#050505" };
         case "dark":
           return { backgroundFill: "#B2F824", arrowFill: "#050505" };
         default:

@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-20">
+        <div className="py-6 lg:py-20">
           <Image src={logo} alt="Logo" className="mx-auto h-auto" />
         </div>
         <p className="text-gray text-center">

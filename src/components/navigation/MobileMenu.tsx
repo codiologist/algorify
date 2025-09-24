@@ -120,7 +120,7 @@ export default function MobileMenu() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-500 ease-out ${
+        className={`fixed inset-0 z-999 transition-all duration-500 ease-out ${
           isMenuOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
         style={{

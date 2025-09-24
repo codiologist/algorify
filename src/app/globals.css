@@ -140,3 +140,14 @@
 .container-xl {
   @apply mx-auto px-6 xl:max-w-7xl 2xl:max-w-[1440px];
 }
+.swiper-pagination {
+  position: relative !important;
+  @apply bottom-0 mt-14 block;
+
+  .swiper-pagination-bullet {
+    @apply bg-gray h-3 w-3;
+    &.swiper-pagination-bullet-active {
+      @apply bg-lemon;
+    }
+  }
+}

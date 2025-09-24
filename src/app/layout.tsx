@@ -1,8 +1,6 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import "./globals.css";
 
 const grotesk = localFont({
@@ -38,16 +36,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${grotesk.variable} antialiased`}>
-        <Header />
-        <div className="pt-20 lg:pt-0">{children}</div>
-        <Footer />
-      </body>
+      <body className={`${grotesk.variable} antialiased`}>{children}</body>
     </html>
   );
 }

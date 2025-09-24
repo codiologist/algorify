@@ -67,7 +67,7 @@ export default function ExpertDigitalSolution() {
             <span className="text-blue-brand mr-2">
               Expert{" "}
               <Image
-                src="/icons/flower-icon.png"
+                src="/icons/flower-icon.svg"
                 alt="Gear Icon"
                 width={60}
                 height={60}

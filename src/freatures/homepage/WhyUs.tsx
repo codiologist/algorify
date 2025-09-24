@@ -73,7 +73,7 @@ const WhyUs = () => {
             <span className="mr-2">
               with{" "}
               <Image
-                src="/icons/flower-icon.png"
+                src="/icons/flower-icon.svg"
                 alt="Algorify icon"
                 width={60}
                 height={60}

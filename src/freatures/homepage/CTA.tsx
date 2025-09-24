@@ -58,7 +58,7 @@ const CTA = () => {
             <h2 className="flex items-center gap-x-2 text-5xl leading-tight font-semibold">
               <span className="text-gray">Be</span> Dynamic
               <Image
-                src="/icons/flower-icon.png"
+                src="/icons/flower-icon.svg"
                 alt="Icon"
                 width={65}
                 height={65}
