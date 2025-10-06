@@ -77,7 +77,7 @@ const CTA = () => {
             </h2>
             <div className="mt-10 text-center lg:text-left">
               <Link href="#" className="inline-block">
-                <CustomButton variant="green">Start Now</CustomButton>
+                <CustomButton variant="lemon">Start Now</CustomButton>
               </Link>
             </div>
           </div>

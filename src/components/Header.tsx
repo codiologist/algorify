@@ -72,13 +72,15 @@ export default function Header({ variant = "transparent" }: HeaderProps) {
 
           <DesktopMenu />
 
-          <CustomButton
-            className="px-6"
-            variant="transparent"
-            showArrow={false}
-          >
-            Hire Us
-          </CustomButton>
+          <Link href="/hire-us" aria-label="Hire Us">
+            <CustomButton
+              className="px-6"
+              variant="transparent"
+              showArrow={false}
+            >
+              Hire Us
+            </CustomButton>
+          </Link>
         </div>
       </div>
 

@@ -11,7 +11,8 @@ const buttonVariants = cva(
       variant: {
         transparent:
           "bg-transparent hover:bg-transparent text-black font-medium text-base border-2 border-black hover:border-black",
-        green: "bg-lemon text-black hover:bg-lemon",
+        lemon: "bg-lemon text-black hover:bg-lemon",
+        "lemon-white": "bg-lemon text-black hover:bg-lemon ",
         dark: "bg-[#050505] text-white hover:bg-[#050505] border-2 border-white",
       },
       size: {
@@ -33,9 +34,10 @@ const arrowVariants = cva(
     variants: {
       variant: {
         transparent: "bg-black text-white",
-        green: "bg-black text-white",
-        "green-blue": "bg-transparent text-blue-600",
-        "green-black": "bg-transparent text-black",
+        lemon: "bg-black text-white",
+        "lemon-blue": "bg-transparent text-blue-600",
+        "lemon-white": "bg-transparent text-black",
+        "lemon-black": "bg-transparent text-black",
         dark: "bg-[#B2F824] text-[#050505]",
       },
       size: {
@@ -58,9 +60,9 @@ export interface CustomButtonProps
   asChild?: boolean;
   /** Show the circular arrow icon element to the right */
   showArrow?: boolean;
-  /** Override the arrow’s variant; defaults to a sensible mapping from the button variant */
+  /** Override the arrowâ€™s variant; defaults to a sensible mapping from the button variant */
   arrowVariant?: VariantProps<typeof arrowVariants>["variant"];
-  /** Override the arrow’s size; defaults to the button size */
+  /** Override the arrowâ€™s size; defaults to the button size */
   arrowSize?: VariantProps<typeof arrowVariants>["size"];
 }
 
@@ -121,28 +123,34 @@ const CustomButton = React.forwardRef<ButtonElement, CustomButtonProps>(
     // Determine arrow variant/size defaults based on button variant/size
     const resolvedArrowVariant =
       arrowVariant ||
-      (variant === "green"
-        ? "green"
-        : variant === "dark"
-          ? "dark"
-          : "transparent");
+      (
+        {
+          transparent: "transparent",
+          lemon: "lemon",
+          "lemon-white": "lemon-white",
+          dark: "dark",
+        } as Record<NonNullable<CustomButtonProps["variant"]>, string>
+      )[variant ?? "transparent"] ||
+      "transparent";
+
     const resolvedArrowSize = arrowSize || size;
 
-    const getArrowColors = (v: string) => {
-      switch (v) {
-        case "transparent":
-          return { backgroundFill: "#000000", arrowFill: "#B2F824" };
-        case "green":
-          return { backgroundFill: "#000000", arrowFill: "#B2F824" };
-        case "green-blue":
-          return { backgroundFill: "#ffffff", arrowFill: "#2563eb" };
-        case "green-black":
-          return { backgroundFill: "#ffffff", arrowFill: "#050505" };
-        case "dark":
-          return { backgroundFill: "#B2F824", arrowFill: "#050505" };
-        default:
-          return { backgroundFill: "#131313", arrowFill: "#B2F824" };
-      }
+    const getArrowColors = (variant: string) => {
+      const colorMap: Record<
+        string,
+        { backgroundFill: string; arrowFill: string }
+      > = {
+        transparent: { backgroundFill: "#000000", arrowFill: "#B2F824" },
+        lemon: { backgroundFill: "#000000", arrowFill: "#B2F824" },
+        "lemon-white": { backgroundFill: "#ffffff", arrowFill: "#050505" },
+        "lemon-blue": { backgroundFill: "#ffffff", arrowFill: "#3E69D7" },
+        "lemon-black": { backgroundFill: "#ffffff", arrowFill: "#050505" },
+        dark: { backgroundFill: "#B2F824", arrowFill: "#050505" },
+      };
+
+      return (
+        colorMap[variant] ?? { backgroundFill: "#131313", arrowFill: "#B2F824" }
+      );
     };
 
     const arrowColors = getArrowColors(resolvedArrowVariant as string);
@@ -168,7 +176,9 @@ const CustomButton = React.forwardRef<ButtonElement, CustomButtonProps>(
           <div
             className={cn(
               arrowVariants({
-                variant: resolvedArrowVariant,
+                variant: resolvedArrowVariant as VariantProps<
+                  typeof arrowVariants
+                >["variant"],
                 size: resolvedArrowSize,
               }),
             )}

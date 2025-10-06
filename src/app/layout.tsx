@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const grotesk = localFont({
@@ -30,8 +31,28 @@ const grotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Algorify Labs",
-  description: "",
+  title: {
+    default: "Algorify Labs",
+    template: "%s | Algorify Labs",
+  },
+  description:
+    "Algorify Labs. We help businesses amplify their online presence with cutting-edge marketing strategies, high-impact designs, and scalable digital solutions.",
+  keywords: [
+    "Algorify Labs",
+    "Software Development",
+    "Web Development",
+    "Mobile App Development",
+    "UI/UX Design",
+    "E-commerce Solutions",
+    "Webflow Development",
+    "React Development",
+    "Next.js Development",
+    "Node.js Development",
+    "AI Solutions",
+    "Custom Software",
+    "Tech Consultation",
+    "Business Solutions",
+  ],
 };
 
 export default function RootLayout({
@@ -41,7 +62,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${grotesk.variable} antialiased`}>{children}</body>
+      <body className={`${grotesk.variable} antialiased`}>
+        {children}
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </body>
     </html>
   );
 }

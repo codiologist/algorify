@@ -15,7 +15,7 @@ export default function Buttons() {
               Type 1: Transparent Background
             </h2>
             <p className="text-muted-foreground">
-              Transparent background, black text, green hover effect with
+              Transparent background, black text, lemon hover effect with
               separated black arrow
             </p>
             <div className="flex flex-wrap gap-4">
@@ -29,41 +29,41 @@ export default function Buttons() {
             </div>
           </div>
 
-          {/* Type 2: Green background */}
+          {/* Type 2: lemon background */}
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Type 2: Green Background</h2>
+            <h2 className="text-xl font-semibold">Type 2: lemon Background</h2>
             <p className="text-muted-foreground">
-              Green background, black text, no hover color change with separated
+              lemon background, black text, no hover color change with separated
               black arrow
             </p>
             <div className="flex flex-wrap gap-4">
-              <CustomButton variant="green">Try Now</CustomButton>
-              <CustomButton variant="green" size="sm">
-                Small Green
+              <CustomButton variant="lemon">Try Now</CustomButton>
+              <CustomButton variant="lemon" size="sm">
+                Small lemon
               </CustomButton>
-              <CustomButton variant="green" size="lg">
-                Large Green
+              <CustomButton variant="lemon" size="lg">
+                Large lemon
               </CustomButton>
             </div>
           </div>
 
-          {/* Type 3: Green background with blue arrow */}
+          {/* Type 3: lemon background with blue arrow */}
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">
-              Type 3: Green Background with Blue Arrow
+              Type 3: lemon Background with Blue Arrow
             </h2>
             <p className="text-muted-foreground">
-              Green background, black text with separated blue arrow
+              lemon background, black text with separated blue arrow
               (non-circular)
             </p>
             <div className="flex flex-wrap gap-4">
-              <CustomButton variant="green" arrowVariant="green-blue">
+              <CustomButton variant="lemon" arrowVariant="lemon-blue">
                 Get Service
               </CustomButton>
-              <CustomButton variant="green" arrowVariant="green-blue" size="sm">
+              <CustomButton variant="lemon" arrowVariant="lemon-blue" size="sm">
                 Small Service
               </CustomButton>
-              <CustomButton variant="green" arrowVariant="green-blue" size="lg">
+              <CustomButton variant="lemon" arrowVariant="lemon-blue" size="lg">
                 Large Service
               </CustomButton>
             </div>
@@ -72,7 +72,7 @@ export default function Buttons() {
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">Type 4: Dark Background</h2>
             <p className="text-muted-foreground">
-              Dark background (#050505), white text with bright green arrow
+              Dark background (#050505), white text with bright lemon arrow
               background and dark arrow
             </p>
             <div className="flex flex-wrap gap-4">
@@ -96,8 +96,8 @@ export default function Buttons() {
               <CustomButton variant="transparent" showArrow={false}>
                 No Arrow Transparent
               </CustomButton>
-              <CustomButton variant="green" showArrow={false}>
-                No Arrow Green
+              <CustomButton variant="lemon" showArrow={false}>
+                No Arrow lemon
               </CustomButton>
               <CustomButton variant="dark" showArrow={false}>
                 No Arrow Dark

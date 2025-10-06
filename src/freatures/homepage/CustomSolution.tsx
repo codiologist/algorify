@@ -58,7 +58,7 @@ const CustomSolution = () => {
 
             <div className="mt-8">
               <Link href="#">
-                <CustomButton variant="green">Try Now</CustomButton>
+                <CustomButton variant="lemon">Try Now</CustomButton>
               </Link>
             </div>
           </div>

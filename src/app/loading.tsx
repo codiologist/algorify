@@ -1,5 +1,5 @@
 import Image from "next/image";
-import algorify_logo from "/public/favicon-2.svg";
+import algorify_logo from "/public/favicon.svg";
 
 const Loading = () => {
   return (

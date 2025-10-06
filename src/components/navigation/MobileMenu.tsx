@@ -81,13 +81,15 @@ export default function MobileMenu() {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <CustomButton
-            className="px-6"
-            variant="transparent"
-            showArrow={false}
-          >
-            Hire Us
-          </CustomButton>
+          <Link href="/hire-us" aria-label="Hire Us">
+            <CustomButton
+              className="px-6"
+              variant="transparent-default"
+              showArrow={false}
+            >
+              Hire Us
+            </CustomButton>
+          </Link>
 
           <button
             onClick={toggleMenu}

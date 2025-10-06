@@ -59,7 +59,7 @@ const CTA = () => {
             </h2>
             <div className="mt-10">
               <Link href="#" className="mt-6">
-                <CustomButton variant="green">Start Now</CustomButton>
+                <CustomButton variant="lemon">Start Now</CustomButton>
               </Link>
             </div>
           </CardContent>
