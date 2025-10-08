@@ -84,7 +84,7 @@ export default function MobileMenu() {
           <Link href="/hire-us" aria-label="Hire Us">
             <CustomButton
               className="px-6"
-              variant="transparent-default"
+              variant="transparent"
               showArrow={false}
             >
               Hire Us

@@ -342,7 +342,7 @@ export function HireUsForm() {
           className="h-14 w-full rounded-full bg-[#c4ff0d] px-8 text-base font-semibold text-black hover:bg-[#b0e60c] disabled:opacity-50"
         ></Button> */}
 
-        <CustomButton variant="green" type="submit" disabled={isSubmitting}>
+        <CustomButton variant="lemon" type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit Project Request"}
         </CustomButton>
       </form>

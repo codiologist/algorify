@@ -31,8 +31,8 @@ const Hero = () => {
         </h1>
         <div className="mt-10 flex justify-end lg:mt-12">
           <CustomButton
-            variant="green"
-            arrowVariant="green-black"
+            variant="lemon"
+            arrowVariant="lemon-black"
             className="text-lg font-medium"
           >
             Book a call
