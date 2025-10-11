@@ -26,7 +26,10 @@ export default function DesktopMenu() {
           onMouseLeave={() => setHoveredItem(null)}
         >
           {item.hasDropdown ? (
-            <button className="hover:text-blue flex cursor-pointer items-center space-x-3 text-lg font-medium text-black transition-colors duration-200">
+            <Link
+              href={item.href}
+              className="hover:text-blue flex cursor-pointer items-center space-x-3 text-lg font-medium text-black transition-colors duration-200"
+            >
               <span>{item.label}</span>
               {item.section_name === "services" && (
                 <Image
@@ -35,7 +38,7 @@ export default function DesktopMenu() {
                   className="h-8 w-8"
                 />
               )}
-            </button>
+            </Link>
           ) : (
             <Link
               href={item.href}
@@ -85,7 +88,7 @@ export default function DesktopMenu() {
                       </div>
 
                       <div>
-                        <Link href="/book-appointment">
+                        <Link href="/hire-us">
                           <CustomButton
                             variant="dark"
                             className="px-14 text-xl"
@@ -177,7 +180,7 @@ export default function DesktopMenu() {
                       </div>
 
                       <div>
-                        <Link href="/">
+                        <Link href="/hire-us">
                           <CustomButton
                             variant="dark"
                             className="px-14 text-xl"

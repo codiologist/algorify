@@ -25,24 +25,24 @@ const iconBaseClass =
 
 const solutions: SolutionItem[] = [
   {
-    title: "Web Development",
-    description:
-      "Custom-built, scalable, and high-performance websites designed for seamless user experiences.",
-    href: "#",
-    Icon: WebDevIcon,
-  },
-  {
     title: "UI/UX Design",
     description:
       "Visually stunning and user-centric designs that enhance engagement and usability.",
-    href: "#",
+    href: "/services",
     Icon: UIUXIcon,
+  },
+  {
+    title: "Web Development",
+    description:
+      "Custom-built, scalable, and high-performance websites designed for seamless user experiences.",
+    href: "/services",
+    Icon: WebDevIcon,
   },
   {
     title: "App Development",
     description:
       "Robust and feature-rich mobile applications tailored for a smooth and intuitive experience.",
-    href: "#",
+    href: "/services",
     Icon: AppDevIcon,
     iconClassName:
       "[&>rect]:text-blue-brand [&>path]:text-white group-hover:[&>path]:fill-white group-hover:[&>path]:text-black group-hover:[&>rect]:text-white",
@@ -51,7 +51,7 @@ const solutions: SolutionItem[] = [
     title: "Webflow Development",
     description:
       "Pixel-perfect, no-code Webflow solutions for modern and dynamic websites.",
-    href: "#",
+    href: "/services",
     Icon: WebflowIcon,
   },
 ];

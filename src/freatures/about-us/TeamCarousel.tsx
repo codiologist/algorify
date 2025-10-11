@@ -5,7 +5,10 @@ import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import firoj_image from "@/assets/images/teams/firoj-ahmed-robin.png";
+import firoj_image from "@/assets/images/teams/firoj-ahmed-robin.jpg";
+import mamun_image from "@/assets/images/teams/mamun.jpg";
+import rasel_image from "@/assets/images/teams/rasel.jpg";
+import reza_image from "@/assets/images/teams/reza.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,39 +24,27 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Firoj Ahmed",
+    name: "Nazmul Hasan Rasel",
     designation: "CEO & Founder",
-    image: firoj_image.src,
+    image: rasel_image.src,
   },
   {
     id: 2,
     name: "Firoj Ahmed",
-    designation: "CEO & Founder",
+    designation: "CTO & Co-Founder",
     image: firoj_image.src,
   },
   {
     id: 3,
-    name: "Firoj Ahmed",
-    designation: "CEO & Founder",
-    image: firoj_image.src,
+    name: "Shamim Reza",
+    designation: "Backend Developer",
+    image: reza_image.src,
   },
   {
     id: 4,
-    name: "Firoj Ahmed",
-    designation: "CEO & Founder",
-    image: firoj_image.src,
-  },
-  {
-    id: 5,
-    name: "Firoj Ahmed",
-    designation: "CEO & Founder",
-    image: firoj_image.src,
-  },
-  {
-    id: 6,
-    name: "Firoj Ahmed",
-    designation: "CEO & Founder",
-    image: firoj_image.src,
+    name: "Mamun",
+    designation: "UI/UX Designer",
+    image: mamun_image.src,
   },
 ];
 

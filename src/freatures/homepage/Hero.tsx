@@ -1,6 +1,7 @@
 import { CustomButton } from "@/components/CustomButton";
 import Image from "next/image";
 
+import Link from "next/link";
 import circle_badge from "/public/animated-circle.png";
 import sparkle_blue from "/public/sparkle-blue.svg";
 import sparkle_green from "/public/sparkle-green.png";
@@ -63,7 +64,9 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex items-center justify-center 2xl:mt-14">
-          <CustomButton variant="transparent">Request a Demo</CustomButton>
+          <Link href="/hire-us">
+            <CustomButton variant="transparent">Request a Demo</CustomButton>
+          </Link>
         </div>
       </div>
     </section>

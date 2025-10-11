@@ -2,24 +2,24 @@ export const desktopNavigationItems = [
   {
     section_name: "services",
     label: "Services",
-    href: "#",
+    href: "/services",
     hasDropdown: true,
     subNavItems: [
       {
         label: "UI/UX Design",
         description:
           "Creating intuitive and user-friendly digital experiences.",
-        href: "/services/web-development",
+        href: "/services",
       },
       {
         label: "Web & App Development",
         description: "Start your journey with cutting-edge solutions.",
-        href: "/services/web-app-development",
+        href: "/services",
       },
       {
         label: "Data Analytics",
         description: "Unlock insights with powerful data-driven strategies.",
-        href: "/services/data-analytics",
+        href: "/services",
       },
       {
         label: "WebFlow Development",
@@ -29,7 +29,7 @@ export const desktopNavigationItems = [
       {
         label: "SaaS Design & Development",
         description: "Crafting scalable solutions for modern businesses.",
-        href: "/services/saas-design-development",
+        href: "/services",
       },
     ],
   },
@@ -39,35 +39,35 @@ export const desktopNavigationItems = [
     href: "/about-us",
     hasDropdown: false,
   },
-  {
-    section_name: "works",
-    label: "Works",
-    href: "/our-works",
-    hasDropdown: false,
-  },
-  {
-    section_name: "more",
-    label: "More",
-    href: "#",
-    hasDropdown: true,
-    subNavItems: [
-      {
-        label: "Home",
-        description: "Where creativity meets innovation",
-        href: "/",
-      },
-      {
-        label: "Career",
-        description: "Start your journey with us",
-        href: "/career",
-      },
-      {
-        label: "Meet the Team",
-        description: "Get to know the minds behind the magic",
-        href: "/meet-the-team",
-      },
-    ],
-  },
+  // {
+  //   section_name: "works",
+  //   label: "Works",
+  //   href: "/our-works",
+  //   hasDropdown: false,
+  // },
+  // {
+  //   section_name: "more",
+  //   label: "More",
+  //   href: "#",
+  //   hasDropdown: true,
+  //   subNavItems: [
+  //     {
+  //       label: "Home",
+  //       description: "Where creativity meets innovation",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Career",
+  //       description: "Start your journey with us",
+  //       href: "/career",
+  //     },
+  //     {
+  //       label: "Meet the Team",
+  //       description: "Get to know the minds behind the magic",
+  //       href: "/meet-the-team",
+  //     },
+  //   ],
+  // },
 ];
 
 // Mobile Navigation Items

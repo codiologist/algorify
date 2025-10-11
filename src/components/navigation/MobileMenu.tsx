@@ -233,7 +233,7 @@ export default function MobileMenu() {
 
           {/* Book Appointment Button */}
           <div className="mx-auto mt-10">
-            <Link href="/book-appointment">
+            <Link href="/hire-us">
               <CustomButton variant="dark" className="px-14 text-xl">
                 Book an appointment
               </CustomButton>

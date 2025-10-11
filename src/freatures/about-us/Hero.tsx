@@ -1,5 +1,6 @@
 import { CustomButton } from "@/components/CustomButton";
 import Image from "next/image";
+import Link from "next/link";
 import laptop_desktop from "/public/laptop-design-mock-desktop.png";
 import laptop_mobile from "/public/laptop-design-mock-mobile.png";
 
@@ -30,13 +31,15 @@ const Hero = () => {
           Scalable Growth
         </h1>
         <div className="mt-10 flex justify-end lg:mt-12">
-          <CustomButton
-            variant="lemon"
-            arrowVariant="lemon-black"
-            className="text-lg font-medium"
-          >
-            Book a call
-          </CustomButton>
+          <Link href="/hire-us">
+            <CustomButton
+              variant="lemon"
+              arrowVariant="lemon-black"
+              className="text-lg font-medium"
+            >
+              Book a call
+            </CustomButton>
+          </Link>
         </div>
       </div>
       <div className="absolute right-10 bottom-14 lg:right-16 lg:bottom-10">

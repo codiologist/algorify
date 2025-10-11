@@ -57,7 +57,7 @@ const CustomSolution = () => {
             </h2>
 
             <div className="mt-8">
-              <Link href="#">
+              <Link href="/hire-us">
                 <CustomButton variant="lemon">Try Now</CustomButton>
               </Link>
             </div>

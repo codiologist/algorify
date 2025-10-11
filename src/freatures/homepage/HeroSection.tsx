@@ -5,6 +5,7 @@ import bg_mobile from "/public/mobile-hero-bg.png";
 import bg_desktop from "/public/plus-grid-frame.png";
 // import bg from "/public/hero-bg-animation.png";
 
+import Link from "next/link";
 import circle_badge from "/public/animated-circle.png";
 import sparkle_blue from "/public/sparkle-blue.svg";
 import sparkle_green from "/public/sparkle-green.png";
@@ -45,7 +46,9 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-10 flex items-center justify-center 2xl:mt-14">
-            <CustomButton variant="transparent">Request a Demo</CustomButton>
+            <Link href="/hire-us">
+              <CustomButton variant="transparent">Request a Demo</CustomButton>
+            </Link>
           </div>
         </div>
 
