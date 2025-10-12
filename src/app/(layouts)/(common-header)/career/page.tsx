@@ -21,8 +21,8 @@ const CareerPage = () => {
       </Banner>
       <section className="container-xl relative py-20 xl:py-30">
         <h1 className="text-blue-brand text-center text-xl leading-relaxed font-semibold lg:text-6xl">
-          Right now, we don't have any open positions. <br /> Please check back
-          later.
+          Right now, we don&apos;t have any open positions. <br /> Please check
+          back later.
         </h1>
       </section>
     </div>
