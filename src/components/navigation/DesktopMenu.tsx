@@ -101,7 +101,7 @@ export default function DesktopMenu() {
 
                     {/* Right Column - Promotional Card */}
                     <div>
-                      <MenuPromotionalCard href="/case-studies">
+                      <MenuPromotionalCard href="/about-us#team-section">
                         <MenuPromotionalCard.Title>
                           Our Expert Team is Here for You
                         </MenuPromotionalCard.Title>
