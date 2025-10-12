@@ -130,7 +130,7 @@ export default function DesktopMenu() {
                   <div className="grid grid-cols-2">
                     {/* Left Column - Promotional Card */}
                     <div>
-                      <MenuPromotionalCard href="/case-studies">
+                      <MenuPromotionalCard href="/">
                         <MenuPromotionalCard.Title>
                           Our Latest Projects
                         </MenuPromotionalCard.Title>

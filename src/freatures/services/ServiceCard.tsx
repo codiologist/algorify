@@ -10,7 +10,8 @@ const ServiceCard = () => {
       {SERVICES_CONTENT.map((service) => (
         <Card
           key={service.id}
-          className={`${service?.bg ? service.bg : "bg-black"} rounded-4xl border-0 pt-0 shadow-none`}
+          id={service.service_id}
+          className={`${service?.bg ? service.bg : "bg-black"} service-card rounded-4xl border-0 pt-0 shadow-none`}
         >
           <Image
             alt="Services"

@@ -2,7 +2,10 @@ import { TeamCarousel } from "./TeamCarousel";
 
 const Teams = () => {
   return (
-    <section className="container-xl relative py-10 !pb-10 xl:py-20">
+    <section
+      id="team-section"
+      className="container-xl relative py-10 !pb-10 xl:py-20"
+    >
       <div className="mb-12 flex flex-col items-center md:flex-row md:justify-between">
         <div className="mb-6 md:mb-0">
           <h2 className="text-4xl leading-[1.1] font-medium tracking-tight text-black 2xl:text-[48px]">

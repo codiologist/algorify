@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 
 export interface ServiceCategory {
   id: number;
+  service_id: string;
   title: string;
   description: string;
   services: string[];
@@ -25,7 +26,8 @@ import webflow_dev_mobile_thumb from "@/assets/images/service-thumbs/webflow-dev
 export const SERVICES_CONTENT: ServiceCategory[] = [
   {
     id: 1,
-    title: "UI UX Design", // Fixed: Declared the title variable
+    title: "UI UX Design",
+    service_id: "ui-ux-design",
     description:
       "We craft intuitive and user-friendly experiences that enhance navigation and engagement. Our focus is on creating seamless digital interactions that align with your brand identity and user needs.",
     services: [
@@ -41,7 +43,8 @@ export const SERVICES_CONTENT: ServiceCategory[] = [
   },
   {
     id: 2,
-    title: "Web & App development", // Fixed: Declared the title variable
+    service_id: "web-app-development",
+    title: "Web & App development",
     description:
       "We build high-performance web and mobile applications that are scalable, user-centric, and business-driven. Our goal is to create seamless digital experiences that empower brands and enhance user engagement.",
     services: [
@@ -56,7 +59,8 @@ export const SERVICES_CONTENT: ServiceCategory[] = [
   },
   {
     id: 3,
-    title: "Data Analytics", // Fixed: Declared the title variable
+    title: "Data Analytics",
+    service_id: "data-analytics",
     description:
       "We transform raw data into actionable insights to help businesses make informed decisions. Our data-driven approach ensures efficiency, accuracy, and strategic growth.",
     services: [
@@ -71,7 +75,8 @@ export const SERVICES_CONTENT: ServiceCategory[] = [
   },
   {
     id: 4,
-    title: "Webflow Development", // Fixed: Declared the title variable
+    title: "Webflow Development",
+    service_id: "webflow-development",
     description:
       "We create custom, responsive, and visually stunning websites with Webflow, ensuring seamless performance and effortless scalability—without the need for complex coding.",
     services: [
@@ -86,7 +91,8 @@ export const SERVICES_CONTENT: ServiceCategory[] = [
   },
   {
     id: 5,
-    title: "SaaS Design & Development", // Fixed: Declared the title variable
+    title: "SaaS Design & Development",
+    service_id: "saas-design-development",
     description:
       "We design and develop scalable, high-performance SaaS platforms that deliver seamless user experiences and drive business growth. Our approach ensures efficiency, security, and intuitive usability for cloud-based applications.",
     services: [
