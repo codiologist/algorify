@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "/public/footer-logo.png";
 import mail_icon from "/public/icons//mail-icon.svg";
 import call_icon from "/public/icons/call-icon.svg";
+import facebook_icon from "/public/icons/facebook.png";
+import linkedin_icon from "/public/icons/linkedin.png";
 const Footer = () => {
   return (
     // <footer className="w-full bg-white px-10 pt-12 pb-6">
@@ -64,6 +67,30 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+              <div className="mt-4 flex items-center gap-2">
+                <Link
+                  href="https://www.facebook.com/algorifylabs"
+                  target="_blank"
+                >
+                  <Image
+                    src={facebook_icon}
+                    alt="Facebook Icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/algorify-labs-ltd/"
+                  target="_blank"
+                >
+                  <Image
+                    src={linkedin_icon}
+                    alt="LinkedIn Icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
