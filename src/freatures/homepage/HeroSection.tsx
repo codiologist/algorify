@@ -5,6 +5,7 @@ import bg_mobile from "/public/mobile-hero-bg.png";
 import bg_desktop from "/public/plus-grid-frame.png";
 // import bg from "/public/hero-bg-animation.png";
 
+import WhatsAppFloatButton from "@/components/ui/whatsAppFloatButton";
 import Link from "next/link";
 import circle_badge from "/public/animated-circle.png";
 import sparkle_blue from "/public/sparkle-blue.svg";
@@ -85,6 +86,11 @@ const HeroSection = () => {
           />
         </div>
       </div>
+      <WhatsAppFloatButton
+        phone="8801876594444"
+        message="Hello! I’m interested in your services."
+        // floats inside the banner only
+      />
     </section>
   );
 };
