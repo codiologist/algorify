@@ -21,8 +21,7 @@ export async function submitHireUsForm(formData: FormData) {
 
   try {
     // Simulate API call to external server
-    const apiResponse = await fetch(
-      "https://jsonplaceholder.typicode.com/posts",
+    const apiResponse = await fetch("http://localhost:3009/api/hire-us",
       {
         method: "POST",
         headers: {
@@ -40,12 +39,13 @@ export async function submitHireUsForm(formData: FormData) {
       },
     );
 
+
     if (!apiResponse.ok) {
       throw new Error("Failed to submit form to server");
     }
 
     const responseData = await apiResponse.json();
-    console.log("[v0] API Response:", responseData);
+
 
     // In a real application, you would:
     // 1. Validate the data again on the server

@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+        
+
+model ProjectInquiry {
+  id            String   @id @default(cuid())
+  name          String
+  email         String
+  mobileNumber  String
+  projectTypes  String[] // stores multiple project types like ['UI/UX', 'WEB DEVELOPMENT', 'APP DEVELOPMENT']
+  description   String?
+  fileName      String?
+  fileSize      Int?     // in bytes
+  createdAt     DateTime @default(now())
+
+  @@map("projectInquiry")
+}

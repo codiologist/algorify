@@ -24,10 +24,10 @@ export default function WhatsAppFloatButton({
   className,
   ariaLabel = "Chat on WhatsApp",
 }: Props) {
-    const href = React.useMemo(() => {
+  const href = React.useMemo(() => {
     const base = `https://wa.me/${phone}`;
     if (!message) return base;
-    return `${base}?text=${encodeURIComponent(message || '')}`;
+    return `${base}?text=${encodeURIComponent(message)}`;
   }, [phone, message]);
 
   return (
