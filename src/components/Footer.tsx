@@ -68,7 +68,10 @@ const Footer = () => {
                 </li>
               </ul>
               <div className="mt-4 flex items-center gap-2">
-                <Link href="/">
+                <Link
+                  href="https://www.facebook.com/algorifylabs"
+                  target="_blank"
+                >
                   <Image
                     src={facebook_icon}
                     alt="Facebook Icon"
@@ -76,7 +79,10 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <Link href="/">
+                <Link
+                  href="https://www.linkedin.com/company/algorify-labs-ltd/"
+                  target="_blank"
+                >
                   <Image
                     src={linkedin_icon}
                     alt="LinkedIn Icon"
