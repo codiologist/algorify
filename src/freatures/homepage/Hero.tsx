@@ -5,6 +5,7 @@ import Link from "next/link";
 import circle_badge from "/public/animated-circle.png";
 import sparkle_blue from "/public/sparkle-blue.svg";
 import sparkle_green from "/public/sparkle-green.png";
+import WhatsAppFloatButton from "@/components/ui/whatsAppFloatButton";
 
 export function Hero() {
   return (
@@ -69,6 +70,11 @@ export function Hero() {
           </Link>
         </div>
       </div>
+      <WhatsAppFloatButton
+        phone="880187594444"
+        message="Hello! I’m interested in your services."
+        // floats inside the banner only
+      />
     </section>
   );
 }
