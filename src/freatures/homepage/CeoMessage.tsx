@@ -29,7 +29,11 @@ const CeoMessage = () => {
                 <span className="ml-2 font-semibold">idea in mind?</span>
               </p>
 
-              <Link href="#" className="mt-11 flex items-center">
+              <Link
+                target="_blank"
+                href="https://wa.me/+8801711356235"
+                className="mt-11 flex items-center"
+              >
                 <Button className="bg-lemon rounded-full text-lg font-medium text-black">
                   Let&apos;s Discuss
                 </Button>
