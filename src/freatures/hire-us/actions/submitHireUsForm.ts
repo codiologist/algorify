@@ -1,6 +1,7 @@
 "use server";
 
 export async function submitHireUsForm(formData: FormData) {
+
   // Simulate server processing delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -14,10 +15,14 @@ export async function submitHireUsForm(formData: FormData) {
     file: formData.get("file") as File | null,
   };
 
+
+
   console.log("Server received form data:", {
     ...data,
     file: data.file ? `${data.file.name} (${data.file.size} bytes)` : null,
   });
+
+
 
   try {
     // Simulate API call to external server
@@ -33,18 +38,19 @@ export async function submitHireUsForm(formData: FormData) {
           mobileNumber: data.mobileNumber,
           projectTypes: data.projectTypes,
           description: data.description,
-          fileName: data.file?.name || null,
-          fileSize: data.file?.size || null,
+          fileurl: null
         }),
       },
     );
+   const responseData = await apiResponse.json();
 
+   console.log(responseData)
 
     if (!apiResponse.ok) {
       throw new Error("Failed to submit form to server");
     }
 
-    const responseData = await apiResponse.json();
+ 
 
 
     // In a real application, you would:

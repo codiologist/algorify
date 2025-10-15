@@ -29,11 +29,7 @@ export default function WhatsAppFloatButton({
   const href = React.useMemo(() => {
     const base = `https://wa.me/${phone}`;
     if (!message) return base;
-<<<<<<< HEAD
-    return `${base}?text=${encodeURIComponent(message)}`;
-=======
     return `${base}?text=${encodeURIComponent(message || "")}`;
->>>>>>> f6751f85962cb3011db25f3d5099363e388276fa
   }, [phone, message]);
 
   return (

@@ -129,7 +129,10 @@ export function HireUsForm() {
         formData.append("file", data.file);
       }
 
+      console.log(formData)
+
       const result = await submitHireUsForm(formData);
+
 
       if (result.success) {
         toast.success(result.message);
