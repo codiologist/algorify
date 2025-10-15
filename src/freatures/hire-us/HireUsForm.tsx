@@ -274,7 +274,7 @@ export function HireUsForm() {
         />
 
         {/* File Upload Field */}
-        <FormField
+        {/* <FormField
           control={form.control}
           name="file"
           render={({ field: { value, onChange, ...field } }) => (
@@ -336,7 +336,7 @@ export function HireUsForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
 
         {/* Submit Button */}
         {/* <Button
